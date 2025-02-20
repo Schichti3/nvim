@@ -462,6 +462,7 @@ require('lazy').setup({
         { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
         -- Load löve API when 'love' is found
         { path = '${3rd}/love2d/library', words = { 'love' } },
+        { path = os.getenv('USERPROFILE') .. '/AppData/Roaming/luarocks/share/lua/5.4' },
       },
     },
   },
