@@ -80,6 +80,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+vim.keymap.set('n', '<leader>l.', '<cmd>!love .<CR>', { desc = 'Use [L]ove in [.] directory' })
+
+vim.keymap.set('n', '<leader>E', '<cmd>!explorer .<CR>', { desc = 'Open windows [E]xplorer in . directory' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -244,6 +248,7 @@ require('lazy').setup({
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>g', group = 'Lazy[g]it' },
+        { '<leader>l', group = '[L]ove' },
       },
     },
   },
