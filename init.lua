@@ -77,7 +77,7 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps
+-- Diagnostic keymap
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('n', '<leader>l.', '<cmd>!love .<CR>', { desc = 'Use [L]ove in [.] directory' })
@@ -150,9 +150,45 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  -- NOTE: Plugins can also be added by using a table,
-  -- with the first argument being the link and the following
-  -- keys can be used to configure plugin behavior/loading/etc.
+  {
+    'bluz71/vim-moonfly-colors',
+    name = 'moonfly',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme('moonfly')
+    end,
+  },
+
+  {
+    'ellisonleao/gruvbox.nvim',
+  },
+
+  {
+    'behemothbucket/gruber-darker-theme.nvim',
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require('gruber-darker').setup()
+      vim.cmd('colorscheme gruber-darker')
+    end,
+  },
+  -- {
+  --   'blazkowolf/gruber-darker.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     italic = {
+  --       strings = false,
+  --       comments = false,
+  --       folds = false,
+  --     },
+  --   },
+  --   config = function()
+  --     vim.cmd.colorscheme('gruber-darker')
+  --   end,
+  -- },
+  --
   require('custom.plugins.oil'),
 
   require('custom.plugins.hop'),
@@ -161,15 +197,7 @@ require('lazy').setup({
 
   require('custom.plugins.noice'),
 
-  {
-    'bluz71/vim-moonfly-colors',
-    name = 'moonfly',
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme('moonfly')
-    end,
-  },
+  require('custom.plugins.harpoon'),
 
   -- Use `opts = {}` to force a plugin to be loaded.
   --
@@ -901,7 +929,7 @@ require('lazy').setup({
 })
 
 vim.keymap.set('n', '<leader>gg', function()
-  Snacks.lazygit()
+  Snacks.lazygit.open()
 end, { desc = 'Open Lazy[g]it' })
 
 vim.keymap.set('n', '<leader>gl', function()
