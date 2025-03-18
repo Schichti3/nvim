@@ -199,6 +199,7 @@ require('lazy').setup({
 
   require('custom.plugins.harpoon'),
 
+  require('custom.plugins.eyeliner'),
   -- Use `opts = {}` to force a plugin to be loaded.
   --
   -- Here is a more advanced example where we pass configuration
