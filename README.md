@@ -6,6 +6,7 @@ git clone https://github.com/Schichti3/nvim.git "${XDG_CONFIG_HOME:-$HOME/.confi
 ```
 
 Installation Windows:
+
 cmd.exe:
 ```
 git clone https://github.com/Schichti3/nvim.git "%localappdata%\nvim"
