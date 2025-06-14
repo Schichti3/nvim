@@ -12,6 +12,8 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.opt.termguicolors = true
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -173,6 +175,13 @@ require('lazy').setup({
     config = function()
       require('gruber-darker').setup()
       vim.cmd('colorscheme gruber-darker')
+      vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight NormalNC guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight EndOfBuffer guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight LineNr guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight SignColumn guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight CursorLineNr guibg=NONE ctermbg=NONE]]
+      vim.cmd [[highlight Whitespace guibg=NONE ctermbg=NONE]]
     end,
   },
   -- {
