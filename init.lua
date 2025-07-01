@@ -34,6 +34,11 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
+vim.keymap.set('n', 'p', '"0p', {})
+vim.keymap.set('n', 'P', '"0P', {})
+vim.keymap.set('n', '<leader>p', '"+p', {})
+vim.keymap.set('n', '<leader>P', '"+P', {})
+
 -- Enable break indent
 vim.opt.breakindent = true
 
