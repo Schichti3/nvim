@@ -62,7 +62,7 @@ vim.opt.scrolloff = 10
 
 vim.opt.tabstop = 4
 
-require('lsp.lsp-config')
+require('config.lsp-config')
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
