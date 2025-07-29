@@ -102,6 +102,13 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-f>', '<C-f>zz')
 vim.keymap.set('n', '<C-b>', '<C-b>zz')
 
+vim.keymap.set('n', '<leader>db', '<cmd> DapToggleBreakpoint <CR>', { desc = 'Toggle breakpoint' })
+vim.keymap.set('n', '<leader>dr', '<cmd> DapContinue <CR>', { desc = 'Continue / run debugger' })
+vim.keymap.set('n', '<F9>', '<cmd> DapContinue <CR>', { desc = 'Continue / run debugger' })
+vim.keymap.set('n', '<F8>', '<cmd> DapStepOver <CR>', { desc = 'Step over' })
+vim.keymap.set('n', '<F7>', '<cmd> DapStepInto <CR>', { desc = 'Step into' })
+vim.keymap.set('n', '<F5>', '<cmd> DapTerminate | DapContinue <CR>', { desc = 'Restart debugger' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -176,6 +183,11 @@ require('lazy').setup({
   require('plugins.eyeliner'),
   require('plugins.supermaven'),
   require('plugins.gitsigns'),
+
+  require('plugins.debugging.mason'),
+  require('plugins.debugging.nvim-dap'),
+  require('plugins.debugging.nvim-nio'),
+  require('plugins.debugging.nvim-dap-ui'),
 
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
@@ -321,7 +333,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]ind [R]esume' })
       vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = '[F]ind Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Find existing [b]uffers' })
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Find existing [b]uffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
