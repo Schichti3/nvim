@@ -11,6 +11,8 @@ vim.opt.mouse = 'a'
 
 vim.opt.showmode = false
 
+vim.opt.winborder = 'rounded'
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.

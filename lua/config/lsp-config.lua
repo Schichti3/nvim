@@ -30,3 +30,19 @@ vim.diagnostic.config({
     current_line = true,
   },
 })
+
+vim.g.diagnostics_active = false;
+vim.diagnostic.enable(false, {})
+function toggle_diagnostics() 
+  if vim.g.diagnostics_active then
+    vim.g.diagnostics_active = false
+    vim.diagnostic.enable(false, {})
+    print("Diagnostics OFF")
+  else
+    vim.g.diagnostics_active = true
+    vim.diagnostic.enable(true, {})
+    print("Diagnostics ON")
+  end
+end
+
+vim.keymap.set('n', '<leader>dt', function() toggle_diagnostics() end)
