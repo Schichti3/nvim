@@ -184,7 +184,6 @@ require('lazy').setup({
   require('plugins.supermaven'),
   require('plugins.gitsigns'),
 
-  require('plugins.debugging.mason'),
   require('plugins.debugging.nvim-dap'),
   require('plugins.debugging.nvim-nio'),
   require('plugins.debugging.nvim-dap-ui'),

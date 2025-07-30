@@ -23,8 +23,7 @@ return {
     if sysname == 'Linux' then
       codelldbPath = '/nix/store/azkpzqkvahhzm2dp8jyf6kw6hvpq7vi5-vscode-extension-vadimcn-vscode-lldb-1.11.4/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb'
     elseif sysname == 'Windows_NT' then
-      -- on windows it it assumed to be available in path
-      codelldbPath = 'codelldb'
+      codelldbPath = 'C:\\Users\\jan.schicht\\.vscode\\extensions\\vadimcn.vscode-lldb-1.11.5\\adapter\\codelldb.exe'
     end
 
     dap.adapters.codelldb = {
