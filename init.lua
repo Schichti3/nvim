@@ -103,7 +103,6 @@ require('lazy').setup({
   },
 
   require('plugins.oil'),
-  require('plugins.hop'),
   require('plugins.snacks'),
   require('plugins.noice'),
   require('plugins.harpoon'),
@@ -160,7 +159,6 @@ require('lazy').setup({
         { '<leader>f', group = '[F]ind' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = '[H]op' },
         { '<leader>g', group = '[G]it' },
       },
     },
@@ -272,6 +270,9 @@ require('lazy').setup({
       -- set use_icons to true if you have a Nerd Font
       statusline.setup({ use_icons = vim.g.have_nerd_font })
 
+      require('mini.jump2d').setup({view = { dim = true}})
+      vim.api.nvim_set_hl(0, "MiniJump2dSpot", { fg = "#88E788", bold = true})
+      vim.api.nvim_set_hl(0, "MiniJump2dLabel", { fg = "none"})
       require('mini.pick').setup()
       vim.api.nvim_set_hl(0, "MiniPickMatchCurrent", { fg = "#88E788"})
       -- You can configure sections in the statusline by overriding their
