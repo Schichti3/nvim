@@ -275,6 +275,13 @@ require('lazy').setup({
       vim.api.nvim_set_hl(0, "MiniJump2dLabel", { fg = "none"})
       require('mini.pick').setup()
       vim.api.nvim_set_hl(0, "MiniPickMatchCurrent", { fg = "#88E788"})
+      --display color of color hex codes
+      local hipatterns = require('mini.hipatterns')
+      hipatterns.setup({
+        highlighters = {
+          hex_color = hipatterns.gen_highlighter.hex_color(),
+        }
+      })
       -- You can configure sections in the statusline by overriding their
       -- default behavior. For example, here we set the section for
       -- cursor location to LINE:COLUMN
