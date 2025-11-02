@@ -3,5 +3,6 @@ return {
   opts = {
     lazygit = { enabled = true, configure = true },
     dashboard = {},
+    picker = {},
   },
 }

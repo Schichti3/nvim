@@ -17,6 +17,8 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.swapfile = false;
+
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -103,7 +105,6 @@ require('lazy').setup({
 
   require('plugins.oil'),
   require('plugins.snacks'),
-  require('plugins.noice'),
   require('plugins.harpoon'),
   require('plugins.eyeliner'),
   require('plugins.supermaven'),
