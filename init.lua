@@ -105,9 +105,7 @@ require('lazy').setup({
 
   require('plugins.oil'),
   require('plugins.snacks'),
-  require('plugins.harpoon'),
   require('plugins.eyeliner'),
-  require('plugins.supermaven'),
   require('plugins.gitsigns'),
 
   require('plugins.debugging.nvim-dap'),
