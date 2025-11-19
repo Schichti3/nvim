@@ -12,6 +12,10 @@
       "rev": "7e1cd7703ff2924d7038476dcbc04b950203b902",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "quicker.nvim": {
+      "rev": "12a2291869a326424b1cbee937f4f80334433012",
+      "src": "https://github.com/stevearc/quicker.nvim"
+    },
     "snacks.nvim": {
       "rev": "fe7cfe9800a182274d0f868a74b7263b8c0c020b",
       "src": "https://github.com/folke/snacks.nvim"
