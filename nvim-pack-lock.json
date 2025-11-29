@@ -4,6 +4,14 @@
       "rev": "b409fd1d8b9ea7ec7c0923eb2562b52ed5d1ab0a",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
+    "nvim-dap": {
+      "rev": "5860c7c501eb428d3137ee22c522828d20cca0b3",
+      "src": "https://github.com/mfussenegger/nvim-dap"
+    },
+    "nvim-dap-view": {
+      "rev": "25ffcf3a6d8d44b6275dac9d5ff9b1f9485907d9",
+      "src": "https://github.com/igorlfs/nvim-dap-view"
+    },
     "nvim-lspconfig": {
       "rev": "b7c48a7111534b66bee077da8035ac7208a294ff",
       "src": "https://github.com/neovim/nvim-lspconfig"

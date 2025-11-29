@@ -1,4 +1,3 @@
-vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
@@ -11,7 +10,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 local snacks = require('snacks')
 vim.keymap.set('n', '<leader>ff', snacks.picker.files)
 vim.keymap.set('n', '<leader>fg', snacks.picker.grep)
+vim.keymap.set('n', '<leader>fr', snacks.picker.resume)
 vim.keymap.set('n', '<leader>fh', snacks.picker.help)
+
+vim.keymap.set('n', '<leader>fn', snacks.picker.files)
 
 vim.keymap.set('n', '<leader>gg', Snacks.lazygit.open)
 vim.keymap.set('n', '<leader>gl', Snacks.lazygit.log)
@@ -25,5 +27,16 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-f>', '<C-f>zz')
 vim.keymap.set('n', '<C-b>', '<C-b>zz')
+
+-- debugging
+vim.keymap.set('n', '<leader>db', '<cmd>DapToggleBreakpoint<CR>')
+vim.keymap.set('n', '<leader>dc', '<cmd>DapContinue<CR>')
+vim.keymap.set('n', '<Right>', '<cmd>DapStepInto<CR>')
+vim.keymap.set('n', '<Left>', '<cmd>DapStepOut<CR>')
+vim.keymap.set('n', '<Down>', '<cmd>DapStepOver<CR>')
+vim.keymap.set('n', '<Up>', '<cmd>DapRestartFrame<CR>')
+
+vim.keymap.set('n', '<leader>dt', '<cmd>DapViewToggle<CR>')
+vim.keymap.set('n', '<leader>dw', '<cmd>DapViewWatch<CR>')
 
 

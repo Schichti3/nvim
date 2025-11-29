@@ -4,11 +4,9 @@ vim.pack.add({
 	{ src = 'https://github.com/folke/snacks.nvim' },
 	{ src = 'https://github.com/folke/which-key.nvim' },
 	{ src = 'https://github.com/stevearc/quicker.nvim' },
-	{
-		src = 'https://github.com/echasnovski/mini.nvim',
-		load = function()
-		end
-	},
+	{ src = 'https://github.com/echasnovski/mini.nvim' },
+	{ src = 'https://github.com/mfussenegger/nvim-dap'},
+	{ src = 'https://github.com/igorlfs/nvim-dap-view'},
 })
 
 require('oil').setup()
