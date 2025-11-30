@@ -5,6 +5,10 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
 
+vim.keymap.set('i', '<c-space>', function()
+	vim.lsp.completion.get()
+end)
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 local snacks = require('snacks')

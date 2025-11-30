@@ -16,6 +16,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.undofile = true
 vim.o.winborder = 'rounded'
+vim.o.completeopt = 'menuone,noinsert'
 
 
 vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
